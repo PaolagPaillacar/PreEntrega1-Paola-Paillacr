@@ -1,45 +1,77 @@
-let bienevidos = alert("bienvedino@ a la tienda Cali") 
+let bienevidos = alert("bienvenid@ a la tienda Cali") 
+
 
  //regitro de usuario/
 
 let nombredeUsuario = prompt("Registrese, coloque nombre de usuario")
 let contraseña = prompt ("ingrese almenos 8 carecteres (letras y numero)")
+let metodoPago = prompt(`Los mismos pueden ser abonado con efectivo o tarjeta ¿Que opcion eliges?:
+1: Efectivo
+2: Tarjeta
+`);
 
 if ((nombredeUsuario != '') && (contraseña != ''))
-alert ("tu usuario" + nombredeUsuario + "\ncontraseña" +contraseña)
+alert ("tu usuario: " + nombredeUsuario + "\ncontraseña: " +contraseña)
 alert (" seleccione el codigo de prenda")
 
 console.log("su usuario fue registrado con exito" + nombredeUsuario + contraseña ) 
 
-function mostrarPrecio (codigo) {
-    switch(codigo) {
-        case 1:
-            alert("Buzo crop $20.000")
-            costoPrenda = 20000
-            break
-        case 2:
-            alert("buzo oversize $25.000")
-            costoPrenda = 25000
-            break
-        case 3:
-            alert("Remera mega $8.000")
-            costoPrenda = 8000
-            break
-        case 4:
-            alert("vestido mila $12.000")
-            costoPrenda = 12000
-            break
-        case 5:    
-            alert("Falda larga $15.000")
-            costoPrenda = 15000
-            break
-        default:
-            alert("🤔 No entendimos tu selección.")
-            break
-    }
+switch(metodoPago){
+    case "1":
+        alert("Pagando en efectivo obtienes un %10 de descuento");
+        break;
+    case "2":
+        alert("Pagando con tarjeta usted puede hacerlo en 3 cuotas, 6 cuotas o 12 cuotas");
+        break;
+}
+
+const carrito = []
+const prendas = [{ codigo: 1, nombre: 'buzo crop', precio: 20000},
+                 { codigo: 2, nombre: 'buzo oversize', precio:25000 },
+                 { codigo: 3, nombre: 'Remera mega', precio: 8000},
+                 { codigo: 4, nombre: 'vestido mila ', precio: 12000},
+                 { codigo: 5, nombre: 'camisa', precio: 25000 }, 
+                ];
+
+function buscarPrenda(codigo) {
+    let prendaSeleccionada = prendas.find((prenda)=> prenda.codigo === codigo)
+    return prendaSeleccionada
 }
 
 function consultarPrendas() {
+    let codigo = prompt("Ingresa el código numérico de la prenda a consultar:")
+    let prendaElegida = buscarPrenda(parseInt(codigo))
+
+    if (prendaElegida !== undefined) {
+        carrito.push(prendaElegida)
+        let respuesta = confirm("¿Deseas elegir otra prenda?")
+        if (respuesta === true) {
+            consultarPrendas()
+        } else{ 
+            const shop = new Compra(carrito)
+            let subtotal = shop.obtenerSubtotal()
+            console.table(carrito)
+            prompt("✅ El costo total es de $ " + subtotal + "¿Desea quitar alguna prenda?" + quitarPrenda)
+        }
+        
+        
+        
+    } else {
+        alert("⛔️ Error en el código de prenda ingresado. Refresca para comenzar de nuevo.")
+    }
+
+
+}
+
+function quitarPrenda (){
+    prendaElegida.pop();
+    console.table(carrito);
+}
+
+
+
+
+/* function consultarPrendas() {
     let codigoPrenda = prompt("Ingresa el código numérico de la prenda a consultar:")
     if (codigoPrenda) {
         mostrarPrecio(parseInt(codigoPrenda))
@@ -63,9 +95,6 @@ function mostrarCuotas() {
     console.log("Sin intereses.")
 }
 
-
-
-
-
-
-
+/*  pop: Eliminar un elemento al final del Array */
+/* prendas.pop();
+console.log(prendas); */
