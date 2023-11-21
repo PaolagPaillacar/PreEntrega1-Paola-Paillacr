@@ -3,16 +3,16 @@ let bienevidos = alert("bienvenid@ a la tienda Cali")
 
  //regitro de usuario/
 
-let nombredeUsuario = prompt("Registrese, coloque nombre de usuario")
-let contraseña = prompt ("ingrese almenos 8 carecteres (letras y numero)")
-let metodoPago = prompt(`Los mismos pueden ser abonado con efectivo o tarjeta ¿Que opcion eliges?:
+let nombredeUsuario = ("Registrese, coloque nombre de usuario")
+let contraseña =  ("ingrese almenos 8 carecteres (letras y numero)")
+let metodoPago = (`Los mismos pueden ser abonado con efectivo o tarjeta ¿Que opcion eliges?:
 1: Efectivo
 2: Tarjeta
 `);
 
 if ((nombredeUsuario != '') && (contraseña != ''))
-alert ("tu usuario: " + nombredeUsuario + "\ncontraseña: " +contraseña)
-alert (" seleccione el codigo de prenda")
+("tu usuario: " + nombredeUsuario + "\ncontraseña: " +contraseña)
+(" seleccione el codigo de prenda")
 
 console.log("su usuario fue registrado con exito" + nombredeUsuario + contraseña ) 
 
@@ -57,14 +57,14 @@ function consultarPrendas() {
         
         
     } else {
-        alert("⛔️ Error en el código de prenda ingresado. Refresca para comenzar de nuevo.")
+    ("⛔️ Error en el código de prenda ingresado. Refresca para comenzar de nuevo.")
     }
 
 
 }
 
 function quitarPrenda (){
-    prendaElegida.pop();
+    quitarPrenda.pop();
     console.table(carrito);
 }
 

@@ -11,42 +11,69 @@
 </head>
 
 <body>
-  <h1> Primera- PreEntrega</h1>
-  <div class="container 1">
-    <h2 class="text2">Venta de productos</h2>
-    <div class="container2">
-      <div class="prenda"> 
-        <h2> N° 1</h2>
-        <p> buzo crop</p>
-        <p>$20.000</p>
-      </div>
-      <div class="prenda">
-        <h2>N°2</h2>
-        <p>buzo oversize</p>
-        <p> $25.000
-        </p>
-      </div>
-      <div class="prenda">
-        <h2>N°3</h2>
-        <p>remera mega</p>
-        <p>$8000
-        </p>
-      </div>
-      <div class="prenda">
-        <h2>N°4</h2>
-        <p>vestido mila </p>
-        <p> $12.000</p>
-      </div>
-      <div class="prenda">
-        <h2>N°5</h2>
-        <p>camisa</p>
-        <p>$25.000</p>
+  <header class="header">
+    <!-- logo + navbar -->
+    <div class="tienda container">
+      <img class="img-logo" src="./recursos/logo.jpeg" alt="logo de tienda">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </nav>
+      <!-- carrito -->
+      <div>
+        <ul>
+          <li class="submenu">
+            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #787878;"></i>
+            <img src="" id="Subcarrito" alt="">
+            <div id="carrito">
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <table>Precio</table>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a href="#" id="Vaciar-carrito" class="btn-2">Vaciar carrito</a>
+            </div>
+
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
- <div class="container3">
-  <p> En consola colocar consultarPrenda()</p>
-   </div>
+    <div class="header-content">
+
+      <h1>ROPA SIN GÉNERO.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo iusto libero aut aspernatur eius
+        numquam, commodi incidunt sequi molestiae perferendis nulla natus ratione voluptas ut magni error! Veritatis,
+        ipsa.</p>
+      <div class="botons">
+        <a href="#" class="btn-1">Remeras</a>
+        <a href="#" class="btn-1">Pantalones</a>
+        <a href="#" class="btn-1">Buzos</a>
+      </div>
+
+    </div>
+
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://kit.fontawesome.com/8f5c9daf85.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

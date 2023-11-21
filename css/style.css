@@ -10,35 +10,149 @@ body {
     color: rgb(244, 244, 244);
     font-family: sans-serif;
 }
+.header{
+    display: flex;
+    position: relative;
+}
 
-h1{ 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tienda{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.img-logo{
+    width: 140px;
+}
+
+/* h1{ 
     font-size: 100;
     display: flex;
     justify-content: center;
+} */
+
+.navbar ul li {
+    position: relative;
+    float: left;
+
 }
 
-
-.container2{  
-    color: azure;
-  display: flex;
- justify-content: space-evenly;
- font-weight: bold;
-}
-
-.text2{
-    height: 100px;
-}
-
-.prenda{ 
-    height: 100px;
-    width: 100x;
+.navbar ul li a {
+    font-size: 18px;
     padding: 20px;
-    background: orange;
-    border-radius: 5px;
+    color: white;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
 }
 
+.navbar ul li a:hover {
+   color: #7e7674;
+}
 
-.container3{
-    padding: 100px;
-    font-size: 150;
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+.munu label{
+    cursor: pointer;
+    display: none;
+}
+
+.submenu{
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(18px);
+    top: 100%;
+    z-index: 1;
+    background-color:#4e4b5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table{
+    width: 100%;
+}
+
+th {
+    color: #dfdde0;
+}
+
+td{
+    color: #dfdde0;
+}
+
+.borrar {
+    background-color: #e45d34;
+    border-radius: 50%;
+    padding:  5px 10px;
+    text-decoration: none;
+    color: #dfdde0;
+    font-weight: 800;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.h1 {
+    font-size: 70px;
+    color: #dfdde0;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.header-content p{
+    font-size: 18px;
+    padding: 0 200px;
+    color: #8b7e7b;
+    margin-bottom: 80px;
+}
+
+.botons {
+    display: flex;
+    justify-content: center;
+
+ 
+}
+
+.btn-1 {
+    text-decoration: none;
+display: flex;
+justify-content: center;
+width: 200px;
+margin: 0 20px;
+padding: 13px 0;
+border-radius: 25px;
+color: #dfdde0;
+text-transform: uppercase;
+background-color: #e45d34;
+}
+
+.btn-1:hover{
+    background-color: #c23b11;
 }
